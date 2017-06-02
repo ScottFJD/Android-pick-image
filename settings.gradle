@@ -1,1 +1,1 @@
-include ':app', ':pick_image'
+include ':app', ':pick_image', ':androidutils'
