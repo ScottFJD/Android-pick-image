@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.scottfu.wyh.pick_image.PickImageActivity;
+import com.scottfu.wyh.pick_image.GalleryHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pick);
-        Intent intent = new Intent(this, PickImageActivity.class);
-        startActivity(intent);
+        GalleryHelper.GalleryOption option = new GalleryHelper.GalleryOption();
+        option.cameraState = false;
+        option.multiSelectMaxCount = 5;
     }
 }

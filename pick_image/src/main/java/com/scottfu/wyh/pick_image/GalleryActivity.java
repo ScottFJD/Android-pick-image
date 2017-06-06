@@ -31,9 +31,11 @@ public class GalleryActivity extends BaseActivity {
 
         Intent intent = new Intent();
         intent.setClass(activity, GalleryActivity.class);
-        Bundle extras = new Bundle();
-        extras.putSerializable(GALLERY_OPTION, option);
-        intent.putExtras(extras);
+
+
+//        Bundle extras = new Bundle();
+//        extras.putSerializable(GALLERY_OPTION, option);
+//        intent.putExtras(extras);
         activity.startActivityForResult(intent, requestCode);
     }
 
@@ -44,6 +46,8 @@ public class GalleryActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         getPermission();
+
+//        Intent intent = getIntent();
 
     }
 
